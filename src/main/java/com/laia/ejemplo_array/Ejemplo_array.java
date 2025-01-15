@@ -19,8 +19,8 @@ public class Ejemplo_array {
         /*ejercicio1();
         ejercicio2();*/
         ejercicio3();
-        ejercicio4();
-        ejercicio5();
+       // ejercicio4();
+       // ejercicio5();
          
     }
 
@@ -131,16 +131,18 @@ public class Ejemplo_array {
     private static void ejercicio3() {
         
         Scanner sc = new Scanner(System.in);
+        /*
         int[] array_duplica = new int[15];
         
         for(int i = 0; i< 15; i++){
             System.out.println("Escrbe un valor");
             array_duplica[i]=sc.nextInt();
-        }
+        }*/
+        int[] array_duplica = {2, 22, 4,23,12,19,53,67,5,3,8,6,7,9,1};
         
         System.out.println("Mostrmamos el array");
         
-        System.out.println("array_duplica: " + Arrays.toString(array_duplica));
+        System.out.println("array_duplica: " + Arrays.toString(array_duplica)+" num elementos: "+array_duplica.length);
         
         //...
         
@@ -177,6 +179,6 @@ public class Ejemplo_array {
      }
 
     private static void ejercicio5() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 }
