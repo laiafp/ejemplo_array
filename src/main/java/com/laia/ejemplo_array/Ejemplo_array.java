@@ -19,6 +19,8 @@ public class Ejemplo_array {
         /*ejercicio1();
         ejercicio2();*/
         ejercicio3();
+        ejercicio4();
+        ejercicio5();
          
     }
 
@@ -173,4 +175,8 @@ public class Ejemplo_array {
         
      
      }
+
+    private static void ejercicio5() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
