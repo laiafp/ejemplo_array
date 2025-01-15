@@ -16,10 +16,10 @@ public class Ejemplo_array {
     public static void main(String[] args) {
         
         
-        /*ejercicio1();
-        ejercicio2();*/
-        ejercicio3();
-       // ejercicio4();
+        //ejercicio1();
+        //ejercicio2();
+        //ejercicio3();
+        ejercicio4();
        // ejercicio5();
          
     }
@@ -144,8 +144,20 @@ public class Ejemplo_array {
         
         System.out.println("array_duplica: " + Arrays.toString(array_duplica)+" num elementos: "+array_duplica.length);
         
-        //...
+        //suma 10 a los 4 primeros elementos
         
+        array_duplica[0] = array_duplica[0]+10;
+        array_duplica[1] = array_duplica[1]+10;
+        array_duplica[2] = array_duplica[2]+10;
+        array_duplica[7] = array_duplica[7]+10;
+        
+        System.out.println("array_duplica +10: " + Arrays.toString(array_duplica)+" num elementos: "+array_duplica.length);
+        
+        for(int i= 0; i < array_duplica.length; i++){
+            array_duplica[i] = array_duplica[i]*2;
+        }
+        
+        System.out.println("array_duplica x2: " + Arrays.toString(array_duplica)+" num elementos: "+array_duplica.length);
         
     }
     
@@ -160,25 +172,65 @@ public class Ejemplo_array {
      private static void ejercicio4() {
          
          Scanner sc = new Scanner(System.in);
-        int[] numeros = new int[10];
+        /*int[] numeros = new int[10];
         
         for(int i = 0; i< 10; i++){
             System.out.println("Escrbe un valor");
             numeros[i]=sc.nextInt();
-        }
+        }*/
+        int[] numeros = {3, 3, 2, 2, 2, 2, 96, 4, 11, 96};
         
         System.out.println("Mostrmamos el array");
         
         System.out.println("numeros: " + Arrays.toString(numeros));
         
         //- los muestra en orden inverso al de entrada.
+        
+        for(int j = numeros.length-1; j >= 0; j--) System.out.print("-" + numeros[j]);
+        
+            
+        
+        
         //- encuentra y muestra la posición que ocupa el primer número negativo en caso de existir. En caso contrario escribirá un mensaje indicándolo
+        int i;
+        
+        for(i= 0; i< numeros.length; i++){
+             
+             if(numeros[i]==7) break;
+         }
+        
+        if(i!=10)System.out.println("el 7 es: " + i);
+        else System.out.println("Mensaje indicando que no hay 7");
+        
         //- muestra cuáles son el mayor y el menor, y cuántas veces se repiten ambos.
+        
+        int mayor= numeros[0];
+        int cont_mayor = 1;
+        int cont_menor = 1;
+        int menor =  numeros[0];
+        for(i= 1; i< numeros.length; i++){         
+             if(mayor < numeros[i] ){
+                 mayor = numeros[i];
+                 cont_mayor = 1;
+             }
+             else if(mayor == numeros[i]) cont_mayor++;
+             if(menor > numeros[i]) {
+                 menor = numeros[i];
+                 cont_menor = 1;
+             }
+             else if(menor == numeros[i]) cont_menor++;
+         }
+         System.out.println("El mayor es: " + mayor + "y aparece "+ cont_mayor+" veces y el menor: "+ menor+ " y aparece "+ cont_menor+" veces" );
         
      
      }
 
     private static void ejercicio5() {
+        //un Listalaia
+        ListaLaia lamia = new ListaLaia(4);
+        
+        lamia.getNum_elementos();
+        
         
     }
 }
