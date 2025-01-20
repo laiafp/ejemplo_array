@@ -21,7 +21,10 @@ public class Ejemplo_array {
         //ejercicio3();
         //ejercicio4();
         //ejercicio5();
-        ejemplo_matriz();
+        //ejemplo_matriz();
+        //AUT6_2_Arrays_Bidimensionales.ejercicio1();
+        
+        AUT6_2_Arrays_Bidimensionales.ejercicio2();
          
     }
 
