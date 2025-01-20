@@ -19,8 +19,9 @@ public class Ejemplo_array {
         //ejercicio1();
         //ejercicio2();
         //ejercicio3();
-        ejercicio4();
-       // ejercicio5();
+        //ejercicio4();
+        //ejercicio5();
+        ejemplo_matriz();
          
     }
 
@@ -178,7 +179,7 @@ public class Ejemplo_array {
             System.out.println("Escrbe un valor");
             numeros[i]=sc.nextInt();
         }*/
-        int[] numeros = {3, 3, 2, 2, 2, 2, 96, 4, 11, 96};
+      /*  int[] numeros = {3, 3, 2, 2, 2, 2, 96, 4, 11, 96};
         
         System.out.println("Mostrmamos el array");
         
@@ -221,16 +222,65 @@ public class Ejemplo_array {
              else if(menor == numeros[i]) cont_menor++;
          }
          System.out.println("El mayor es: " + mayor + "y aparece "+ cont_mayor+" veces y el menor: "+ menor+ " y aparece "+ cont_menor+" veces" );
-        
+        */
+         
+         double[] miarray = {3.7, 6, 9, 2.1, 4, 5};
+         double suma=0;
+         for( double num_actual : miarray){
+             
+             
+             System.out.print(" - "+ num_actual);
+             
+         }
+         System.out.println("suma: "+ suma);
      
      }
 
     private static void ejercicio5() {
         //un Listalaia
-        ListaLaia lamia = new ListaLaia(4);
+        ListaLaia lislaia = new ListaLaia(4);
         
-        lamia.getNum_elementos();
+        System.out.println("Los elementos de mi lista son "+lislaia.getNum_elementos());
+        System.out.println("Mostrar los datos");
+        lislaia.mostrar_lista();
+        System.out.println("Pon datos en el array");
+        lislaia.pedir_datos_lista();
+        System.out.println("Mostrar los datos (CON DATOS)");
+        lislaia.mostrar_lista();
+        System.out.println(" La suma de los datos es: "+lislaia.sumar_datos_lista());
+        System.out.println("Y la media: " +lislaia.media_datos_lista());
+        System.out.println(" donde esta el numero 5: " + lislaia.buscar_elemento(5) );
+        System.out.println(" se ha modificado el elemento: " + lislaia.modifica_elemento(5,10));
+        System.out.println("Mostrar los datos");
+        lislaia.mostrar_lista();
+    }
+    
+    /***
+     * ejemplo_matriz() Ejemplo de una matriz de 2 dimensiones PaisesxMedallas
+     * 
+     */
+    public static void ejemplo_matriz(){
+        final int PAISES = 7;
+        final int MEDALLAS = 3;
+        String[] paises = {"Canada","China","Japon","Rusia","Espana","Ucrania","Estados Unidos" };
+        int[][] cuentas = { { 0, 0, 1 },
+                            { 0, 1, 1}, { 1, 0, 0 }, { 3, 0, 1 }, { 0, 1, 0 }, { 0,0, 1 }, { 0, 2, 0 }};
         
         
+        System.out.println(" \t Pais \t \t Oro \t Plata \t Bronce Total");
+        
+        for (int i = 0; i < PAISES; i++) {
+            System.out.printf("a: %15s", paises[i]);
+            int total = 0;
+            for (int j = 0; j < MEDALLAS; j++) {
+                System.out.printf("%8d",cuentas[i][j]);
+
+                total = total + cuentas[i][j];
+            }
+        System.out.printf("%8d\n" , total);
+        
+        
+        
+        }   
     }
 }
